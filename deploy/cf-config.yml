@@ -1,0 +1,9 @@
+tunnel: 1f18a927-e8f4-448c-9fd9-4085d11027be
+credentials-file: /root/.cloudflared/1f18a927-e8f4-448c-9fd9-4085d11027be.json
+
+ingress:
+  - hostname: 358471.xyz
+    service: http://localhost:8080
+  - hostname: "*.358471.xyz"
+    service: http://localhost:8080
+  - service: http_status:404

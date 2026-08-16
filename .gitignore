@@ -1,0 +1,15 @@
+# 密钥与环境配置（切勿提交真实密钥）
+backend/.env
+deploy/trip.env
+frontend/.env.production
+frontend/.env.local
+
+# 依赖与构建产物
+backend/venv/
+frontend/node_modules/
+frontend/dist/
+__pycache__/
+*.pyc
+
+# IDE
+.idea/

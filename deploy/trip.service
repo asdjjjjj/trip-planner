@@ -1,0 +1,17 @@
+[Unit]
+Description=Trip Planner Backend
+After=network.target
+
+[Service]
+WorkingDirectory=/srv/trip-planner/backend
+EnvironmentFile=/srv/trip-planner/backend/.env
+ExecStart=/srv/trip-planner/backend/.venv/bin/gunicorn app.api.main:app \
+  --workers 2 \
+  --worker-class uvicorn.workers.UvicornWorker \
+  --bind 127.0.0.1:8001 \
+  --timeout 300
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
