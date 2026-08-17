@@ -5,8 +5,8 @@ import { resolve } from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  // 部署在站点子路径 /trip-planner/ 下（根路径由个人作品集占用）
-  base: '/trip-planner/',
+  // 默认部署在站点子路径 /trip-planner/ 下；Vercel 独立部署时设置环境变量 VITE_BASE_PATH=/
+  base: process.env.VITE_BASE_PATH || '/trip-planner/',
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')

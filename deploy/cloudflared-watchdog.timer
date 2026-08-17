@@ -1,0 +1,10 @@
+[Unit]
+Description=Run cloudflared watchdog every 3 minutes
+
+[Timer]
+OnBootSec=60
+OnUnitActiveSec=180
+Unit=cloudflared-watchdog.service
+
+[Install]
+WantedBy=timers.target

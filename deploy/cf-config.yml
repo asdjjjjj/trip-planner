@@ -1,5 +1,7 @@
 tunnel: 1f18a927-e8f4-448c-9fd9-4085d11027be
 credentials-file: /root/.cloudflared/1f18a927-e8f4-448c-9fd9-4085d11027be.json
+# 国内网络 UDP 不稳定，强制使用 HTTP/2（TCP）保证隧道稳定
+protocol: http2
 
 ingress:
   - hostname: 358471.xyz
